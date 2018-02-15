@@ -1,0 +1,208 @@
+
+<!--Div that will hold the dashboard-->
+
+<div id="dashboard_div">
+
+  <!--Divs that will hold each control and chart-->
+  <div id="filter_div"></div>
+  <div>
+    <br>
+    <br>
+  </div>
+  <div id="TeamName"></div>
+
+  <div id="chart_div"></div>
+  <div id="pie_div"></div>
+  <div id="table_div"></div>
+</div>
+
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+  // Load the Visualization API and the controls package.
+  google.load('visualization', '1.0', {
+    'packages': ['controls', 'corechart']
+  });
+  // google.load('visualization', '1', {'packages':['corechart']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+
+  google.setOnLoadCallback(drawDashboard);
+  // Callback that creates and populates a data table,
+  // instantiates a dashboard, a range slider and a pie chart,
+  // passes in the data and draws it.
+  function drawDashboard() {
+
+    // Create our data table.
+    var data = new google.visualization.DataTable({
+      "cols": [
+        {"label": "Group",          "type": "string"},
+        {"label": "Teams",          "type": "string"},
+        {"label": "Month",          "type": "number"},
+        {"label": "Work hours",     "type": "number"},
+        {"label": "Training hours", "type": "number"},
+        {"label": "Utilization",    "type": "number"}
+      ],
+      "rows": [
+        {"c": [ {"v": "CLNTSV"}, {"v": "CSDelv"}, {"v": 7}, {"v": 2097.26}, {"v": 0}, {"v": 0.949158} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "CSPro"}, {"v": 4}, {"v": 168}, {"v": 0}, {"v": 0.5} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "CSPro"}, {"v": 5}, {"v": 166}, {"v": 112}, {"v": 0.891026} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "CSPro"}, {"v": 6}, {"v": 228.5}, {"v": 107}, {"v": 1.02287} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "CSPro"}, {"v": 7}, {"v": 314.25}, {"v": 23}, {"v": 0.900775} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "CSSppt"}, {"v": 7}, {"v": 2552.46}, {"v": 878.42}, {"v": 0.815323} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "CSSrch"}, {"v": 7}, {"v": 1231.46}, {"v": 403.81}, {"v": 0.851703} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "Docstars"}, {"v": 4}, {"v": 1548.36}, {"v": 193.99}, {"v": 0.951064} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "Docstars"}, {"v": 5}, {"v": 1404.41}, {"v": 192.51}, {"v": 0.988193} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "Docstars"}, {"v": 6}, {"v": 1421.97}, {"v": 183.93}, {"v": 0.979207} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "Docstars"}, {"v": 7}, {"v": 164.17}, {"v": 18.17}, {"v": 0.592013} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "JPMC"}, {"v": 4}, {"v": 2887.24}, {"v": 330.78}, {"v": 0.867859} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "JPMC"}, {"v": 5}, {"v": 2560.9}, {"v": 1397.62}, {"v": 0.885179} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "JPMC"}, {"v": 6}, {"v": 3248.59}, {"v": 1931.85}, {"v": 0.933076} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "JPMC"}, {"v": 7}, {"v": 234.52}, {"v": 142.2}, {"v": 0.370787} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "XFT"}, {"v": 4}, {"v": 1613.74}, {"v": 114.66}, {"v": 0.862475} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "XFT"}, {"v": 5}, {"v": 1890.48}, {"v": 69}, {"v": 0.971964} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "XFT"}, {"v": 6}, {"v": 2083.39}, {"v": 32.52}, {"v": 1.02515} ] },
+        {"c": [ {"v": "CLNTSV"}, {"v": "XFT"}, {"v": 7}, {"v": 0}, {"v": 0}, {"v": 0} ] },
+        {"c": [ {"v": "DEVLOP"}, {"v": "AppSupp"}, {"v": 4}, {"v": 202.74}, {"v": 65.92}, {"v": 0.233252} ] },
+        {"c": [ {"v": "DEVLOP"}, {"v": "AppSupp"}, {"v": 5}, {"v": 137.89}, {"v": 67.83}, {"v": 0.171205} ] },
+        {"c": [ {"v": "DEVLOP"}, {"v": "AppSupp"}, {"v": 6}, {"v": 225.98}, {"v": 88}, {"v": 0.266537} ] },
+        {"c": [ {"v": "DEVLOP"}, {"v": "AppSupp"}, {"v": 7}, {"v": 317.36}, {"v": 113}, {"v": 0.315513} ] },
+        {"c": [ {"v": "DOCOPS"}, {"v": "CmpAna"}, {"v": 6}, {"v": 921.2}, {"v": 35.5}, {"v": 0.842165} ] },
+        {"c": [ {"v": "DOCOPS"}, {"v": "CmpAna"}, {"v": 7}, {"v": 1031.24}, {"v": 33.25}, {"v": 0.887075} ] },
+        {"c": [ {"v": "DOCOPS"}, {"v": "OpsSupp"}, {"v": 4}, {"v": 144.29}, {"v": 44.42}, {"v": 1.00914} ] },
+        {"c": [ {"v": "MR"}, {"v": "MR"}, {"v": 6}, {"v": 297}, {"v": 207}, {"v": 0.379518} ] },
+        {"c": [ {"v": "MR"}, {"v": "MR"}, {"v": 7}, {"v": 1301.76}, {"v": 220}, {"v": 0.932451} ] },
+        {"c": [ {"v": "Viewpoint"}, {"v": "CLUTCHBOD"}, {"v": 4}, {"v": 171}, {"v": 37.5}, {"v": 0.461283} ] },
+        {"c": [ {"v": "Viewpoint"}, {"v": "CLUTCHBOD"}, {"v": 5}, {"v": 273.38}, {"v": 0}, {"v": 0.813631} ] },
+        {"c": [ {"v": "Viewpoint"}, {"v": "CLUTCHBOD"}, {"v": 6}, {"v": 245.45}, {"v": 0}, {"v": 0.829223} ] }
+      ]});
+
+    var options = {
+      title: 'Utilization',
+      is3D: 'true',
+      width: 1000,
+      height: 600
+    };
+
+    var dashboard = new google.visualization.Dashboard(
+      document.getElementById('dashboard_div'));
+
+    var donutRangeSlider = new google.visualization.ControlWrapper({
+      'controlType': 'NumberRangeFilter',
+      'containerId': 'filter_div',
+      'options': {
+        'filterColumnLabel': 'Month'
+      }
+    });
+
+    var categoryPicker = new google.visualization.ControlWrapper({
+      controlType: 'CategoryFilter',
+      containerId: 'TeamName',
+      options: {
+        filterColumnLabel: 'Teams', // filter by Team name
+        ui: {
+          caption: 'Choose a Team',
+          sortValues: true,
+          allowNone: true,
+          allowMultiple: true,
+          allowTyping: true
+        }
+
+      }
+    });
+
+    var table = new google.visualization.ChartWrapper({
+      'chartType': 'Table',
+      'containerId': 'table_div',
+      'options': {
+        'width': '100%'
+      },
+      'view': {
+        'columns': [0, 1, 2, 3, 4, 5]
+      }
+    });
+
+    var columnChart = new google.visualization.ChartWrapper({
+      'chartType': 'ColumnChart',
+      'containerId': 'chart_div',
+      'dataTable': google.visualization.data.group(data, [0], [{
+        'column': 5,
+        'aggregation': google.visualization.data.sum,
+        'type': 'number'
+      }]),
+      'options': {
+        'width': 600,
+        'height': 400,
+
+        'legend': 'none',
+        'hAxis': {
+          'title': 'Teams',
+          'titleColor': '#cc0000',
+          'titleFontSize': 20
+        },
+        'vAxis': {
+          'title': 'Utilization',
+          'titleColor': '#cc0000',
+          'titleFontSize': 20
+
+        }
+      },
+      view: {
+        columns: ['Group', 'Utilization']
+      }
+    });
+
+/*
+      var pieChart = new google.visualization.ChartWrapper({
+            'chartType': 'PieChart',
+            'containerId': 'pie_div',
+            'options': {
+              'width': 500,
+              'height': 300,
+              'pieSliceText': 'value',
+              'legend': 'right'
+            }
+          });
+*/
+
+
+
+    // Establish dependencies, declaring that 'filter' drives 'pieChart',
+    // so that the pie chart will only display entries that are let through
+    // given the chosen slider range.
+    dashboard.bind([donutRangeSlider, categoryPicker], [table, columnChart]);
+    console.log(data)
+    dashboard.draw(data);
+
+
+    google.visualization.events.addListener(categoryPicker, 'ready',
+      function(event) {
+        columnChart.setDataTable(google.visualization.data.group(
+
+          table.getDataTable(), [0], [{
+            'column': 5,
+            'aggregation': google.visualization.data.sum,
+            'type': 'number'
+          }]
+        ));
+
+        columnChart.draw();
+      });
+
+    google.visualization.events.addListener(categoryPicker, 'statechange',
+
+      function(event) {
+        columnChart.setDataTable(google.visualization.data.group(
+          table.getDataTable(), [0], [{
+            'column': 5,
+            'aggregation': google.visualization.data.sum,
+            'type': 'number'
+          }]
+        ));
+        columnChart.draw();
+      });
+  }
+
+</script>
+
