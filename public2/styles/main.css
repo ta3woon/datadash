@@ -88,7 +88,8 @@ h3 {
 }
 
 .mdl-textfield__label:after {
-    background-color: #FF0000;  // underline when typing in textfield
+    background-color: #FF0000;  
+    /*underline when typing in textfield*/
 }
 
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
@@ -310,7 +311,8 @@ h3 {
 
 .comments-container .text {
     margin-left: 5px;
-    color: #FF00FF; // 444;
+    color: #FF00FF; 
+    /*// 444;*/
     transition: all 0.2s;
 }
 
@@ -350,7 +352,7 @@ h3 {
 }
 
 .content-item .mdl-card {
-// nada
+/*// nada*/
 }
 
 .content-item .header {
