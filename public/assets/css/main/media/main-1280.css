@@ -1,0 +1,119 @@
+
+/**
+ *   ^---- @MEDIA SCREEN  (max-width > 840) ----^
+ *   ipad landscape
+ *
+ */
+
+@media screen and (max-width: 1280px) {
+
+    h3 {
+      font-size: 20px;
+    }
+
+    #header-logo {
+      font-size: 44px;
+    }
+
+    .mdl-button {
+      font-size: 24px;
+    }
+
+}
+
+
+/**
+ *   @MEDIA SCREEN = SCREEN PHONE
+ *   iphone landscape
+ *   ipad portrait
+ *
+ */
+@media screen and (max-width: 840px) {
+
+    h3 {
+      font-size: 16px;
+    }
+
+    #header-logo {
+      font-size: 28px;
+    }
+
+    #splash-subtext {
+      justify-content: center;
+      align-items: center;
+      font-size: 6px;
+    }
+
+    #page-splash {
+      background: radial-gradient(circle, #00FF00, #000000);
+    }
+
+    #splash-subtext {
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .mdl-button {
+      font-size: 20px;
+    }
+
+}
+
+
+/**
+ *   @MEDIA SCREEN = SCREEN UNKNOWN TINY
+ *   iphone portrait
+ *
+ */
+
+@media screen and (max-width: 609px) {
+
+    h3 {
+      font-size: 14px;
+      padding-left: 65px;
+    }
+
+    .header .mdl-tab {
+        width: auto;
+    }
+
+    #header-logo {
+      font-size: 20px;
+    }
+
+    .mdl-button {
+      font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+
+    #header-logo {
+      font-size: 0px;
+    }
+
+    #header-text:after {
+      font-size: 24px;
+      content: "Device Dashboard";
+    }
+
+    h3 {
+      font-size: 14px;
+      padding-left: 60px;
+    }
+
+    .mdl-button {
+      font-size: 12px;
+    }
+
+    .mdl-grid {
+        padding: 0;
+    }
+
+    .mdl-card {
+        font-size: 14px;
+    }
+
+}

@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "webpack --watch -d",
-    "start": "npm run-script build && nodemon server.js",
+    "start": "nodemon server.js",
     "test": "echo \"No test specified\" && exit 0"
   },
   "repository": {
