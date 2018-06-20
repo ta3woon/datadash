@@ -1,0 +1,13 @@
+.ui.mini.image, .ui.mini.images .image, .ui.mini.images img, .ui.mini.images svg {
+    width: 60px;
+    padding: 5px;
+}
+
+.ui.basic.segment {
+    height: 100vh;
+    padding: 0;
+}
+
+/*.pushable>.pusher {
+    width: calc(100% - 150px);
+}*/
