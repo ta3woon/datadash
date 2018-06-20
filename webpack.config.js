@@ -12,6 +12,7 @@ module.exports = {
   // entry: path.resolve(SRC_DIR, 'index.jsx'),
   module: {
     rules: [
+
       {
         test: /\.css$/,
         use: [
@@ -21,12 +22,27 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-        // query: {
-        //   presets: ['es2015', 'react', 'stage-3']
-        // }
-        // use: ['babel-loader']
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['eslint-loader']
+      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   loader: 'babel-loader',
+      //   exclude: /node_modules/
+      //   // query: {
+      //   //   presets: ['es2015', 'react', 'stage-3']
+      //   // }
+      //   // use: ['babel-loader']
+      // },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader']
       }
     ]
   },

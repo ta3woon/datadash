@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import SignIn from '../components/SignIn';
+import SignIn from '../components/authentication/SignIn';
 
 // import SignIn from '../components/SignIn'
 import '../../assets/css/main/main.css';
@@ -167,6 +167,12 @@ const LoginDiv = (props) => {
 //</main>
 // }
 
+            // <img id="splash-logo" src="../../assets/img/dbi2w.png" />
+
+          // <header className="header mdl-layout__header xtheme-c1">
+          //   <HeaderRow />
+          //   <NavigationBar />
+          // </header>
 class OldMain extends React.Component {
 
   constructor(props) {
@@ -178,17 +184,14 @@ class OldMain extends React.Component {
 
     return (
       <div>
-        <div className="xtheme-c3">
+        <div className="">
 
           { /* SPLASH SCREEN */ }
 
-          <header className="header mdl-layout__header xtheme-c1">
-            <HeaderRow />
-            <NavigationBar />
-          </header>
+
 
           <section id="page-splash">
-            <img id="splash-logo" src="../../assets/img/dbi2w.png" />
+
             <SignIn />
             <div id="version-container" className="version-container">Version: 0.9.9</div>
           </section>
