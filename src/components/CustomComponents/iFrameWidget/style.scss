@@ -1,0 +1,30 @@
+
+iframe {
+	top: 0;
+}
+
+.iframeTarget {
+	top: 45px;
+}
+
+.iframeContent {
+	// position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.iframeBox {
+	position: relative;
+	// width: 50%;
+	// width: 100%;
+}
+
+.iframeBox:before {
+	content: "";
+	display: block!important;
+	// height: 100%!important;
+	width:100%!important;
+	padding-top: 75%!important;
+}
