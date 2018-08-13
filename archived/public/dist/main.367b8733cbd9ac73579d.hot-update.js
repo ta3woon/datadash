@@ -1,0 +1,15 @@
+webpackHotUpdate("main",{
+
+/***/ "./public/src/routes.jsx":
+/*!*******************************!*\
+  !*** ./public/src/routes.jsx ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n// import React from 'react';\n// // import { Route, IndexRoute} from 'react-router';\n// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';\n\n// // ROUTES\n\n// import OldMain from './containers/OldMain';\n// import LoginForm from './components/NavBar';\n\n// class Routes extends React.Component {\n//   render() {\n//   \treturn (\n// \t  <Switch>\n// \t    <Route exact path=\"/\" component={Intro} />\n// \t    <Route path=\"/oldMain\" component={OldMain} />\n// \t    <Route path=\"/login\" component={LoginForm} />\n// \t  </Switch>\n// \t)\n//   }\n\n// };\n\n// export default Routes;\n\nvar SIGN_UP = exports.SIGN_UP = '/signup';\nvar SIGN_IN = exports.SIGN_IN = '/signin';\nvar LANDING = exports.LANDING = '/';\nvar HOME = exports.HOME = '/home';\nvar ACCOUNT = exports.ACCOUNT = '/account';\nvar PASSWORD_FORGET = exports.PASSWORD_FORGET = '/pw-forget';\n\n// https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial///# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wdWJsaWMvc3JjL3JvdXRlcy5qc3guanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vcHVibGljL3NyYy9yb3V0ZXMuanN4P2VmYTgiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0Jztcbi8vIC8vIGltcG9ydCB7IFJvdXRlLCBJbmRleFJvdXRlfSBmcm9tICdyZWFjdC1yb3V0ZXInO1xuLy8gaW1wb3J0IHsgQnJvd3NlclJvdXRlciBhcyBSb3V0ZXIsIFJvdXRlLCBTd2l0Y2ggfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJztcblxuLy8gLy8gUk9VVEVTXG5cbi8vIGltcG9ydCBPbGRNYWluIGZyb20gJy4vY29udGFpbmVycy9PbGRNYWluJztcbi8vIGltcG9ydCBMb2dpbkZvcm0gZnJvbSAnLi9jb21wb25lbnRzL05hdkJhcic7XG5cbi8vIGNsYXNzIFJvdXRlcyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4vLyAgIHJlbmRlcigpIHtcbi8vICAgXHRyZXR1cm4gKFxuLy8gXHQgIDxTd2l0Y2g+XG4vLyBcdCAgICA8Um91dGUgZXhhY3QgcGF0aD1cIi9cIiBjb21wb25lbnQ9e0ludHJvfSAvPlxuLy8gXHQgICAgPFJvdXRlIHBhdGg9XCIvb2xkTWFpblwiIGNvbXBvbmVudD17T2xkTWFpbn0gLz5cbi8vIFx0ICAgIDxSb3V0ZSBwYXRoPVwiL2xvZ2luXCIgY29tcG9uZW50PXtMb2dpbkZvcm19IC8+XG4vLyBcdCAgPC9Td2l0Y2g+XG4vLyBcdClcbi8vICAgfVxuXG4vLyB9O1xuXG4vLyBleHBvcnQgZGVmYXVsdCBSb3V0ZXM7XG5cbmV4cG9ydCBjb25zdCBTSUdOX1VQID0gJy9zaWdudXAnO1xuZXhwb3J0IGNvbnN0IFNJR05fSU4gPSAnL3NpZ25pbic7XG5leHBvcnQgY29uc3QgTEFORElORyA9ICcvJztcbmV4cG9ydCBjb25zdCBIT01FID0gJy9ob21lJztcbmV4cG9ydCBjb25zdCBBQ0NPVU5UID0gJy9hY2NvdW50JztcbmV4cG9ydCBjb25zdCBQQVNTV09SRF9GT1JHRVQgPSAnL3B3LWZvcmdldCc7XG5cblxuLy8gaHR0cHM6Ly93d3cucm9iaW53aWVydWNoLmRlL2NvbXBsZXRlLWZpcmViYXNlLWF1dGhlbnRpY2F0aW9uLXJlYWN0LXR1dG9yaWFsLyJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./public/src/routes.jsx\n");
+
+/***/ })
+
+})
