@@ -1,0 +1,56 @@
+.ui.top {
+    box-shadow: none;
+    border-bottom: none;
+}
+
+.ui.mini.image, .ui.mini.images .image, .ui.mini.images img, .ui.mini.images svg {
+  width: 60px;
+  padding: 5px;
+}
+
+.ui.basic.segment {
+  height: 100vh;
+  padding: 0;
+}
+
+.ui.inverted.vertical {
+    background-color: #1a2231;
+}
+
+.brand-options {
+  background-color: black;
+  padding: 7px;
+}
+
+.brand-options .ui.search.dropdown {
+  color: white;
+  transition: none;
+  border-radius: 3px;
+  background: none;
+  min-width: 100%;
+}
+
+.ui.icon.menu .item {
+  text-align: left;
+}
+
+.ui.labeled.icon.menu .item>.icon:not(.dropdown) {
+  float: left;
+  font-size: 1em!important;
+  margin-right: 10px!important;
+}
+
+.ui.visible.wide.left.sidebar~.fixed, .ui.visible.wide.left.sidebar~.pusher {
+  -webkit-transform: translate3d(250px,0,0);
+  transform: translate3d(250px,0,0);
+  width: calc(100% - 250px);
+}
+
+.ui.wide.left.sidebar, .ui.wide.right.sidebar {
+  width: 250px;
+}
+
+
+/*.pushable>.pusher {
+width: calc(100% - 150px);
+}*/
