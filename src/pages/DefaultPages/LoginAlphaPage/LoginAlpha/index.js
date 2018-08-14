@@ -80,7 +80,7 @@ class LoginAlpha extends React.Component {
             <div className="col-xl-12">
               <div className="login__block__promo text-white text-center">
                 <h1 className="mb-3 text-white">
-                  <strong>WELCOME TO CLEAN UI ADMIN TEMPLATE</strong>
+                  <strong>DTIG</strong>
                 </h1>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem

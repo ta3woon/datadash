@@ -3,32 +3,82 @@ import { connect } from 'react-redux'
 import { REDUCER, submit } from 'ducks/login'
 import { Form, Input, Button } from 'antd'
 
-const FormItem = Form.Item
+import { auth } from '../../../../../firebase';
+
+const FormItem = Form.Item;
+
+const INITIAL_STATE = {
+  email: '',
+  password: '',
+  error: null,
+};
 
 const mapStateToProps = (state, props) => ({
   isSubmitForm: state.app.submitForms[REDUCER],
 })
 
+const updateByPropertyName = (propertyName, value) => () => ({
+  [propertyName]: value,
+});
+
 @connect(mapStateToProps)
 @Form.create()
+
+
+
+
 class LoginForm extends React.Component {
   static defaultProps = {}
-
+  state = { ...INITIAL_STATE };
   // $FlowFixMe
   onSubmit = (isSubmitForm: ?boolean) => event => {
+
+    const {
+      email,
+      password,
+    } = this.state;
+
+    // const {
+    //   history,
+    // } = this.props;
+
     event.preventDefault()
     const { form, dispatch } = this.props
     if (!isSubmitForm) {
       form.validateFields((error, values) => {
-        if (!error) {
-          dispatch(submit(values))
-        }
+
+          auth.doSignInWithEmailAndPassword(email, password)
+            .then((response) => {
+              // console.log('RESPONSE:', response)
+              // this.setState({ ...INITIAL_STATE })
+              dispatch(submit(values))
+            })
+            .catch(error => {
+              console.log('error', error)
+              alert(error)
+              this.setState(updateByPropertyName('error', error));
+              // alert('wrong password');
+            });
+
+        
       })
     }
+
+    // event.preventDefault();
   }
 
   render() {
     const { form, isSubmitForm } = this.props
+
+    const {
+      email,
+      password,
+      error,
+    } = this.state;
+
+    const isInvalid =
+      password === '' ||
+      email === '';
 
     return (
       <div className="cat__pages__login__block__form">
@@ -45,18 +95,18 @@ class LoginForm extends React.Component {
         <Form layout="vertical" hideRequiredMark onSubmit={this.onSubmit(isSubmitForm)}>
           <FormItem label="Email">
             {form.getFieldDecorator('username', {
-              initialValue: 'test@estee.com',
+              initialValue: 'info@ta3woon.com',
               rules: [
                 { type: 'email', message: 'The input is not a valid e-mail address' },
                 { required: true, message: 'Please input your e-mail address' },
               ],
-            })(<Input size="default" />)}
+            })(<Input size="default" type="email" onChange={event => this.setState(updateByPropertyName('email', event.target.value))} />)}
           </FormItem>
           <FormItem label="Password">
             {form.getFieldDecorator('password', {
-              initialValue: 'test123',
+              initialValue: 'Apple@123',
               rules: [{ required: true, message: 'Please input your password' }],
-            })(<Input size="default" type="password" />)}
+            })(<Input size="default" type="password" placeholder="Password" onChange={event => this.setState(updateByPropertyName('password', event.target.value))}/>)}
           </FormItem>
           <div className="mb-2">
             <a href="javascript: void(0);" className="utils__link--blue utils__link--underlined">

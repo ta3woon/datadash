@@ -2,7 +2,7 @@ import React from 'react'
 import Page from 'components/LayoutComponents/Page'
 import Helmet from 'react-helmet'
 import Login from './Login'
-import { withFirebase } from 'react-redux-firebase'
+// import { withFirebase } from 'react-redux-firebase'
 
 class LoginPage extends React.Component {
   render() {
@@ -17,4 +17,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default withFirebase(LoginPage)
+export default LoginPage
